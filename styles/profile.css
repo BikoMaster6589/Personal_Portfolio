@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  color: white;
+  width: 100%;
+  height: 100%;
+  background-color: #0a0410;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+
+@font-face {
+  font-family: Mon400;
+  src: url(/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Mon700;
+  src: url(/fonts/Montserrat-Bold.ttf);
+}
+
+.ScrollEle {
+  display: flex;
+  overflow-x: hidden;
+  gap: 1rem;
+  transform: translate3d(0, 0, 0);
+}
+
+.scroll {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  /* place-items: center; */
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+
+.navbar{
+  position: relative;
+  left: 3rem;
+  width: 50%;
+}
+
+
+.navbar ul {
+  display: flex;
+  padding-top: 2rem;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.2rem;
+  font-family: Mon400;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar ul li {
+  text-decoration: none;
+  color: #929292;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  z-index: 2;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+.scroll::before {
+  border-radius: 49%;
+  z-index: -1;
+  content: "";
+  width: 13%;
+  height: 56%;
+  position: absolute;
+  /* position: sticky; */
+  margin: 14% 54%;
+  background-color: #eb2248;
+  filter: blur(455rem);
+}
+
+.video {
+  display: flex;
+  padding: 0 0 0 3rem;
+}
+
+.introSection {
+  display: flex;
+  flex-direction: column;
+  width: 32vw;
+  gap: 2.3rem;
+}
+
+.introSection .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 5rem;
+  height: 20vh;
+  padding: -5rem;
+}
+
+.introSection .heading h3:first-child {
+  font-family: Mon400;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.introSection .heading h3:last-child {
+  font-family: Mon700;
+  font-size: 1.2rem;
+  color: #eb2248;
+}
+
+.introSection .heading h1 {
+  font-family: Mon700;
+  padding-top: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.introSection .content {
+  font-family: Mon400;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  line-height: 2;
+  color: rgb(221, 221, 221);
+}
+
+.introSection .btn {
+  display: flex;
+  /* flex-direction: row-reverse; */
+  /* justify-content: flex-end; */
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.introSection .btn a {
+  text-decoration: none;
+  font-family: Mon400;
+  font-size: 1.2rem;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.introSection .btn .circle {
+  background-color: #eb2248;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.introSection .btn a::before {
+  content: "";
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  left: 5px;
+  background-color: #eb2248;
+  top: 22px;
+  transition: all 0.5s;
+}
+
+.introSection .btn a:hover::before {
+  width: 100%;
+}
+
+.videoSection {
+  /* background-color: green; */
+  width: 65vw;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-left: 1.5rem;
+}
+
+.videoSection .box {
+  height: 50vh;
+  width: 50vw;
+  position: relative;
+  font-family: Mon400;
+  /* background-color: magenta; */
+}
+
+.videoSection .box .p {
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#show:nth-child(5):hover {
+  left: -2rem;
+}
+
+.videoSection .box .p video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* height: fit-content; */
+}
+
+.videoSection .box .p::before {
+  content: "";
+  height: 0%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #eb2248;
+  transition: all 0.5s;
+  opacity: 0.9;
+}
+
+.videoSection .box .p.playing:hover::before {
+  height: 0%;
+}
+
+#show {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  opacity: 0;
+  transition: all 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: Mon700;
+}
+
+#show:hover {
+  opacity: 1;
+}
+
+#show.notShown:hover {
+  opacity: 0;
+}
+
+.videoSection .box .p:hover::before {
+  height: 100%;
+}
+
+.vide .videoSection .box .heading h3:first-child {
+  font-size: 1rem;
+  color: #eb2248;
+  /* letter-spacing: 0.1rem; */
+}
+
+.videoSection .box .heading h3:last-child {
+  font-size: 1.3rem;
+  padding-bottom: 0.5rem;
+}
+
+.other .videoSection {
+  width: 67%;
+}
+
+.box {
+  cursor: pointer;
+}

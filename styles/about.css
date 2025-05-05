@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  color: white;
+  width: 100%;
+  height: 100%;
+  background-color: #0a0410;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: Mon400;
+  src: url(/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Mon700;
+  src: url(/fonts/Montserrat-Bold.ttf);
+}
+
+.ScrollEle {
+  display: flex;
+  overflow-x: hidden;
+  gap: 1rem;
+  /* width: 400vw; */
+}
+
+.scroll {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  /* place-items: center; */
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.scroll::before {
+  border-radius: 49%;
+  z-index: -1;
+  content: "";
+  width: 13%;
+  height: 56%;
+  position: absolute;
+  /* position: sticky; */
+  margin: 14% 54%;
+  background-color: #eb2248;
+  filter: blur(455rem);
+}
+
+.intro {
+  display: flex;
+  gap: 3rem;
+  /* flex-direction: column; */
+}
+
+.section1 {
+  height: 100vh;
+  width: 10%;
+
+  border-right: 2px solid white;
+}
+
+.navbar ul {
+  display: flex;
+  padding-top: 2rem;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.2rem;
+  font-family: Mon400;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar ul li {
+  text-decoration: none;
+  color: #929292;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  z-index: 2;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.section2 {
+  flex-basis: 50%;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7.5rem;
+}
+
+.section2 .MainContent .heading {
+  font-family: Mon700;
+  font-size: 2rem;
+}
+
+.section2 .MainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section2 .MainContent .heading {
+  color: #eb2248;
+}
+
+.section2 .MainContent .content {
+  font-family: Mon400;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  line-height: 1.5rem;
+  word-spacing: 0.3rem;
+}
+
+.section3 {
+  width: 41%;
+  position: relative;
+}
+
+.section3 img {
+  left: 7rem;
+  top: 14rem;
+  height: 51%;
+  position: absolute;
+  width: 71%;
+  border-radius: 1rem;
+  border: 2px solid #eb2248;
+}
+
+.video {
+  display: flex;
+  padding: 0 0 0 3rem;
+}
+
+.introSection {
+  display: flex;
+  flex-direction: column;
+  width: 32vw;
+  gap: 2.3rem;
+}
+
+.introSection .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 5rem;
+  height: 20vh;
+  padding: -5rem;
+}
+
+.introSection .heading h3 {
+  font-family: Mon400;
+  font-size: 1.2rem;
+  color: #eb2248;
+}
+
+.introSection .heading h1 {
+  font-family: Mon700;
+  padding-top: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.introSection .content {
+  font-family: Mon400;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  line-height: 2;
+  color: rgb(221, 221, 221);
+}
+
+.introSection .btn {
+  display: flex;
+  /* flex-direction: row-reverse; */
+  /* justify-content: flex-end; */
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.introSection .btn a {
+  text-decoration: none;
+  font-family: Mon400;
+  font-size: 1.2rem;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.introSection .btn .circle {
+  background-color: #eb2248;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.introSection .btn a::before {
+  content: "";
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  left: 5px;
+  background-color: #eb2248;
+  top: 22px;
+  transition: all 0.5s;
+}
+
+.introSection .btn a:hover::before {
+  width: 100%;
+}
+
+.videoSection {
+  /* background-color: green; */
+  width: 65vw;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-left: 1.5rem;
+}
+
+.videoSection .box {
+  height: 50vh;
+  width: 50vw;
+  position: relative;
+  font-family: Mon400;
+  /* background-color: magenta; */
+}
+
+.videoSection .box .p {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+.videoSection .box .p video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.videoSection .box .p img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.videoSection .box .heading h3:first-child {
+  font-size: 1rem;
+  color: #eb2248;
+  /* letter-spacing: 0.1rem; */
+}
+
+.videoSection .box .heading h3:last-child {
+  font-size: 1.3rem;
+  padding-bottom: 0.5rem;
+}
+
+.box {
+  cursor: pointer;
+}

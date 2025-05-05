@@ -1,0 +1,40 @@
+body{
+    color : white;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #0a0410;
+}
+
+@font-face {
+    font-family: Mon700;
+    src: url(/fonts/Montserrat-Bold.ttf);
+  }
+  
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Mon700;
+}
+
+
+.main h3{
+    color: #eb2248;
+}
+
+.main h1{
+    font-size: 2.3rem;
+}
+
+.main a{
+    border: 1px solid white;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    background-color: #eb2248;
+    margin-top: 1rem;
+}
